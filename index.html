@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MultiStep Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Best Jobs</h1>
+            <div class="contentContainer tab1">
+                <div class="formControl">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                    <span class="error" id="username-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <span class="error" id="password-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="password" name="cpassword" id="cpassword">
+                    <span class="error" id="cpassword-error"></span>
+                </div>
+            </div>
+
+            <div class="contentContainer tab2">
+                <div class="formControl">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName">
+                    <span class="error" id="firstName-error"> </span>
+                </div>
+                <div class="formControl">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName">
+                    <span class="error" id="lastName-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="gender">Gender</label>
+                    <div class="radioInput">
+                        Male: <input type="radio" name="gender" id="gender" value="Male" checked>
+                        Female: <input type="radio" name="gender" id="gender" value="Female">
+                    </div>
+                    <span class="error" id="gender-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="nationality">Nationality</label>
+                    <select name="nationality" id="nationality">
+                        <option value="">Select One Value</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Australian">Australian</option>
+                        <option value="Austrian">Austrian</option>
+                    </select>
+                    <span class="error" id="nationality-error"></span>
+                </div>
+
+                <div class="formControl">
+                    <label for="dob">Date Of Birth</label>
+                    <input type="date" name="dob" id="dob">
+                    <span class="error" id="dob-error"></span>
+                </div>
+            </div>
+
+            <div class="contentContainer tab3">
+                <div class="formControl">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <span class="error" id="email-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" name="phoneNumber" id="phoneNumber">
+                    <span class="error" id="phoneNumber-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="address">Address</label>
+                    <textarea name="address" id="address"></textarea>
+                    <span class="error" id="address-error"></span>
+                </div>
+            </div>
+
+
+            <div class="contentContainer tab4">
+                <div class="formControl">
+                    <label for="twitter">Twitter</label>
+                    <input type="text" name="twitter" id="twitter">
+                    <span class="error" id="twitter-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="facebook">Facebook</label>
+                    <input type="text" name="facebook" id="facebook">
+                    <span class="error" id="facebook-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="google">Google</label>
+                    <input type="text" name="google" id="google">
+                    <span class="error" id="google-error"></span>
+                </div>
+            </div>
+
+            <div class="contentContainer tab5">
+                <div class="formControl">
+                    <label for="ugCgpa">UG CGPA</label>
+                    <input type="number" name="ugCgpa" id="ugCgpa" >
+                    <span class="error" id="ugCgpa-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="pgCgpa">PG CGPA</label>
+                    <input type="number" name="pgCgpa" id="pgCgpa">
+                    <span class="error" id="pgCgpa-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="project1">Project 1</label>
+                    <input type="text" name="project1" id="project1">
+                    <span class="error" id="project1-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="project2">Project 2</label>
+                    <input type="text" name="project2" id="project2">
+                    <span class="error" id="project2-error"></span>
+                </div>
+                <div class="formControl">
+                    <label for="project3">Project 3</label>
+                    <input type="text" name="project3" id="project3">
+                    <span class="error" id="project3-error"></span>
+                </div>
+            </div>
+            <div class="contentContainer tab6" id="displayHere">
+                 
+            </div>
+            <div class="contentContainer tab7 tab8">
+                <h1>Thank You</h1>
+                <h2>Your Form is Submitted</h2>
+            </div>
+
+            <div class="footer" id="footer">
+                <button id="prev" onclick="renderTab(-1)">Prev</button>
+                <div class="stepIndicator">
+                    <div class="indicator">&nbsp;</div>
+                    <div class="indicator">&nbsp;</div>
+                    <div class="indicator">&nbsp;</div>
+                    <div class="indicator">&nbsp;</div>
+                    <div class="indicator">&nbsp;</div>
+                    <div class="indicator">&nbsp;</div>
+                    <div class="indicator">&nbsp;</div>
+                </div>
+                <button id="next" onclick="validateForm(1)">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
